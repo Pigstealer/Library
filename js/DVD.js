@@ -5,17 +5,17 @@ var Lib = function () {
  Lib.prototype.myDVDArray = new Array();
 
 // Functions to manipulate library below here
-Lib.prototype.addDVD = function(DVD){
+
+//takes object name as input (DVD1) adds to array
+Lib.prototype.addDVD = function(DVD){   
   if (this.myDVDArray.length > 0) {
-    for (var i = 0; i < this.myDVDArray.length; i++) {
-      if (this.myDVDArray[i].title.indexOf(DVD.title) < 0){
-        this.myDVDArray.push(DVD);
-        return true;
-      } else
-      {
-      return false;
+    for (i=0; i<this.myDVDArray.length; i++) {
+      if (this.myDVDArray[i].title.indexOf(DVD.title) >= 0){
+        return false;        
       };
     };
+    this.myDVDArray.push(DVD);
+    return true;
   } else
   {
     this.myDVDArray.push(DVD);
@@ -23,7 +23,8 @@ Lib.prototype.addDVD = function(DVD){
   };
 };
 
-Lib.prototype.removeDVDByTitle = function (dvdTitle) {
+//Takes DVD title as input and removes it from array
+Lib.prototype.removeDVDByTitle = function (dvdTitle) {    
   for (i=0; i<this.myDVDArray.length; i++) {
     if (this.myDVDArray[i].title == dvdTitle) {
         this.myDVDArray.splice(i, 1);
@@ -33,7 +34,8 @@ Lib.prototype.removeDVDByTitle = function (dvdTitle) {
   return false;
 };
 
-Lib.prototype.removeDVDByStudio = function (DVDStudio) {
+//Takes studio name as input and removes the object from the array
+Lib.prototype.removeDVDByStudio = function (DVDStudio) {    
   for (i=0; i<this.myDVDArray.length; i++) {
     if (this.myDVDArray[i].studio == DVDStudio) {
       this.myDVDArray.splice(i, 1);
@@ -43,7 +45,8 @@ Lib.prototype.removeDVDByStudio = function (DVDStudio) {
   return false;
 };
 
-Lib.prototype.getRandomDVD = function () {
+//Takes no input and returns a random DVD
+Lib.prototype.getRandomDVD = function () {      
   // Return a random number between 1 and 10:
   // Math.floor((Math.random() * 10) + 1);
   var indexValue = Math.floor((Math.random() * this.myDVDArray.length));
@@ -55,7 +58,8 @@ Lib.prototype.getRandomDVD = function () {
   };
 };
 
-Lib.prototype.getDVDByTitle1 = function (DVDTitle) {
+//Takes partial title as input and returns a list of DVD titles
+Lib.prototype.getDVDByTitle1 = function (DVDTitle) {    
   var titleArray = new Array();
   for (i=0; i<this.myDVDArray.length; i++) {
     var DVDIndex = this.myDVDArray[i].title.toLowerCase();
@@ -68,19 +72,21 @@ Lib.prototype.getDVDByTitle1 = function (DVDTitle) {
   };
 
    return titleArray;
- };
-
-//not to spec
-Lib.prototype.getDVDByTitle = function (DVDTitle) {
-  for (i=0; i<this.myDVDArray.length; i++) {
-      if (this.myDVDArray[i].title == DVDTitle) {
-      var indexNum = i;
-      };
-  };
-     return this.myDVDArray[indexNum];
 };
 
-Lib.prototype.getDVDByStudio1 = function (DVDStudio) {
+//not to spec
+//Takes full title as input and returns DVD information
+Lib.prototype.getDVDByTitle = function (DVDTitle) {
+  for (i=0; i<this.myDVDArray.length; i++) {
+    if (this.myDVDArray[i].title == DVDTitle) {
+    var indexNum = i;
+    };
+  };
+  return this.myDVDArray[indexNum];
+};
+
+//Takes partial studio name as input and returns a list of studios
+Lib.prototype.getDVDByStudio1 = function (DVDStudio) {    
   var studioArray = new Array();
   for (i=0; i<this.myDVDArray.length; i++) {
     var DVDIndex = this.myDVDArray[i].studio.toLowerCase();
@@ -92,21 +98,23 @@ Lib.prototype.getDVDByStudio1 = function (DVDStudio) {
     };
   };
 
-   return studioArray;
+  return studioArray;
  };
 
 //not to spec
-Lib.prototype.getDVDByStudio = function (DVDStudio) {
+//Takes full studio name as input and returns DVD information
+Lib.prototype.getDVDByStudio = function (DVDStudio) {   
   for (i=0; i<this.myDVDArray.length; i++) {
-      if (this.myDVDArray[i].studio == DVDStudio) {
+    if (this.myDVDArray[i].studio == DVDStudio) {
       var indexNum = i;
-      };
+    };
   };
-     return this.myDVDArray[indexNum];
+  return this.myDVDArray[indexNum];
 };
 
 //Not to spec
-Lib.prototype.addDVDsOld = function (DVDs) {
+//Takes array name of new DVD array and adds to library without checking for dups used during testing
+Lib.prototype.addDVDsOld = function (DVDs) {    
   var DVDCount = 0;
   for (i=0; i<DVDs.length; i++) {
     this.myDVDArray.push(DVDs[i]);
@@ -115,7 +123,8 @@ Lib.prototype.addDVDsOld = function (DVDs) {
   return DVDCount;
 };
 
-Lib.prototype.addDVDs = function (DVDs) {
+//Takes array name of new DVD array and adds to library skipping duplicates
+Lib.prototype.addDVDs = function (DVDs) {   
   var DVDCount = 0;
   var addIt = true;
   for (i=0; i<DVDs.length; i++) {
@@ -131,9 +140,10 @@ Lib.prototype.addDVDs = function (DVDs) {
       };
     };
   return DVDCount;
-  };
+};
 
-Lib.prototype.getStudios = function () {
+//Takes no input and returns a list of studios from the library
+Lib.prototype.getStudios = function () {  
   var studioArray = new Array();
   if (this.myDVDArray.length == 0){
     return studioArray;
@@ -149,7 +159,8 @@ Lib.prototype.getStudios = function () {
   };
 };
 
-Lib.prototype.getRandomStudio = function () {
+//Takes no input and returns the info on a random DVD from the library
+Lib.prototype.getRandomStudio = function () {   
   var indexValue = Math.floor((Math.random() * this.myDVDArray.length));
   if (this.myDVDArray.length == 0) {
     return null;}
@@ -160,8 +171,19 @@ Lib.prototype.getRandomStudio = function () {
   };
 };
 
-Lib.prototype.getDVDsByRunningTime = function (symbol, time) {
-  var byTimeArray = new Array();  
+//Takes < or > operator and an integer as input and returns a list of DVDs meeting the criteria
+
+// Found this looking for that function Kyle spoke of but I don't understand it so I will have to 
+//    study up on it before I put it in.
+// var math_it_up = {
+    // '+': function (x, y) { return x + y },
+    // '-': function (x, y) { return x - y }
+// }​​​​​​​;
+
+// math_it_up['+'](1, 2) == 3;
+
+Lib.prototype.getDVDsByRunningTime = function (symbol, time) {   
+  var byTimeArray = new Array();
   if (symbol == "<") {
     for (i=0; i<this.myDVDArray.length; i++) {
       if (this.myDVDArray[i].runningTime < time) {
@@ -178,8 +200,8 @@ Lib.prototype.getDVDsByRunningTime = function (symbol, time) {
   };
   return byTimeArray;
 };
-
 // Functions to manipulate library above here
+
 function DVD(oData){
     this.title = oData.title;
     this.studio = oData.studio;
@@ -203,11 +225,6 @@ var DVD6 = new DVD({title: "Twelve Monkeys", studio: "Universal Studios", runnin
 var DVD7 = new DVD({title: "Reel Horror", studio: "Peacock Films", runningTime: 1, releaseYear: "1985", dateAdded: fDate});
 var DVD8 = new DVD({title: "Young Frankenstein", studio: "20th Century Fox", runningTime: 106, releaseYear: "1974", dateAdded: fDate});
 var DVD9 = new DVD({title: "Evolution", studio: "Dreamworks Pictures", runningTime: 102, releaseYear: "2001", dateAdded: fDate});
-// var DVD10 = new DVD();
-// var DVD11 = new DVD();
-// var DVD12 = new DVD();
-// var DVD13 = new DVD();
-// var DVD14 = new DVD();
 
 var library1 = new Lib();
 
