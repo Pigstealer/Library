@@ -31,3 +31,8 @@ Lib.prototype.removeBookByTitle = function(str){
 
 //instance of Library Class
 var gLib = new Lib();
+
+
+other way to do it
+array[other.array.indexOf(variable)]
+
