@@ -1,0 +1,14 @@
+<button class="btn btn-primary" type="button"
+onclick="trackAnchorClickSC('css-code');"CSS code for Drop Menu</button>
+<button class="btn btn-primary" type="button"
+onclick="trackAnchorClickSC('HTML-code');"HTML code for Drop Menu</button>
+
+jumps to 
+
+<s Name="css-code"></a>
+<h2>CSS code for Drop Menu</a>
+
+and later
+
+<s Name="HTML-code"></a>
+<h2>HTML code for Drop Menu</a>

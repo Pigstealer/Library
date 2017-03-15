@@ -1,0 +1,46 @@
+function newBook(title, author, numberOfPages, Published) {
+    //properties
+    this.title = title;
+    this.author = author;
+    this.numberOfPages = numberOfPages;
+    //events
+    //methods
+    this.Published = Published;
+}
+$(function(){
+  window.glibrary = new library();
+  window.glibrary.init();
+});
+var library = function () {
+}; //array
+library.prototype.init = function(){
+  this._bindEvents();
+};
+library.prototype._bindEvents = function(){
+  $("#add-book").on("click", $.proxy(this._addBook, this));
+};
+library.prototype._myBookArray = new Array();
+library.prototype._addBook = function () {
+  var aVals = this._getAddBookValues();
+  if(aVals.length >= 4) {
+    var book = new newBook(aVals[0], aVals[1], aVals[2], aVals[3]);
+    for (var i = 0; i < this.myBookArray.length; i++) {
+      if (this.myBookArray[i].title == book.title) {
+        return false;
+      }
+    }
+    this.myBookArray.push(book);
+    return true;
+  }
+  return alert("All fields must be filled out. Please check book fields");
+};
+library.prototype._getAddBookValues = function(){
+  var aVals = new Array();
+  $("#new-book-form input").each(function(index, val){
+    var vInput = $(this).val();
+    if(vInput !== "" && vInput != NaN) {
+      aVals.push($(this).val());
+    }
+  });
+  return aVals;
+};

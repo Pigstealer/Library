@@ -6,24 +6,343 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-      <title>Library</title>
+      <title>Class assignment jQuery version</title>
 
     <!-- Bootstrap -->
-    <!--<link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">-->
-    <!--<link href="css/style.css" rel="stylesheet">-->
-
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-<h1>Library project</h1>
+    <!-- Header -->
+    <div class="header">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title">
+              <h3>My DVD Collection</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- <div class="header2"> -->
+    <!-- <div class="container-fluid"> -->
+      <!-- <div class="row"> -->
+        <!-- <div class="col-sm-12"> -->
+
+          <!-- Snagged from the internet -->
+          <!-- For this project use the one following line -->
+          <!-- <div id="main-carousel" class="carousel slide" data-ride="carousel"> -->
+            <!-- Indicators -->
+            <!--<ol class="carousel-indicators">-->
+              <!--<li data-target="#main-carousel" data-slide-to="0" class="active"></li>-->
+              <!--<li data-target="#main-carousel" data-slide-to="1"></li>-->
+              <!--<li data-target="#main-carousel" data-slide-to="2"></li>-->
+              <!-- <li data-target="#main-carousel" data-slide-to="3"></li> -->
+            <!--</ol>-->
+            <!-- Wrapper for slides -->
+
+           <!--  For this project use the following bit
+            <div class="carousel-inner">
+              <div class="item active">
+                <img src="images/Slide1.jpg" alt="AVC pic1">
+                <div class="carousel-caption">
+                	<h3>Caterpiller</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/Slide2.jpg" alt="AVC pic2">
+                <div class="carousel-caption">
+                	<h3>Stuck in the fence</h3>
+                </div>
+              </div>
+              <div class="item">
+                <img src="images/Slide3.jpg" alt="AVC pic3">
+                <div class="carousel-caption">
+                	<h3>Out for a drive</h3>
+                </div>
+              </div>
+              For this project use the above bit -->
+
+              <!-- <div class="item"> -->
+                <!-- <img src="images/Slide.jpg" alt="AVC pic4"> -->
+                <!-- <div class="carousel-caption"> -->
+                  <!-- <h3>Out for a drive</h3> -->
+                <!-- </div> -->
+              <!-- </div> -->
+        <!-- </div> -->
+
+            <!-- Controls -->
+            <!--<a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">-->
+              <!--<span class="glyphicon glyphicon-chevron-left"></span>-->
+            <!--</a>-->
+            <!--<a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">-->
+              <!--<span class="glyphicon glyphicon-chevron-right"></span>-->
+            <!--</a>-->
+      <!-- </div> Carousel -->
+
+
+    <!-- </div> -->
+        <!-- <div class="col-sm-1"> -->
+        <!-- </div> -->
+        <!-- Content to the right of the carousel -->
+        <!-- <div class="col-sm-5"> -->
+        <!--<div class="col-sm-6">-->
+          <!--<div class="carousel-text">-->
+            <!--<h3>Sparkfun AVC contestants</h3><br />-->
+            <!--<p class="comment more">-->
+              <!--<p id="mainLinkContent">-->
+             <!--Here are a few of the contestants from the Sparkfun AVC (Autonomous Vehicle Challenge) from a couple of years ago. The event is pretty well run, interesting and fun to watch. The people who enter the contest are pretty imaginative and creative. There were UFOs, vehicles with a variety of humorous attachments (like the caterpiller to the left), balancing robots and some that defy description. There was even a full size SUV that managed to traverse the course with no one driving it.-->
+            <!-- <a href='javascript:void(0);' onclick='readMoreLessText();'>Read More</a> -->
+            <!--</p>-->
+              <!--<a id="mainLink" href='javascript:void(0);' onclick="textResize('mainLinkContent', 'mainLink');">Read More</a>-->
+
+          <!--</p>-->
+  <!-- </div> -->
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!--Figure out how to do the dropdowns like John did-->
+      <div class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-left">
+          <li><a href="#">Add</a></li>
+          <li><a href="#">Get</a></li>
+          <li><a href="#">Remove</a></li>
+        </ul>
+      </div>
+    </nav>
+    <!-- Main part of page -->
+
+
+    <hr>
+
+      <!-- Left side of the main section -->
+    <div class="mainbody">  
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="inputform">
+            <p>
+              <section>
+                    <!--<form action="/action_page.php">-->
+                <div class="vertical-menu">
+                  Add DVD
+                  <div class="addDVD-form">
+                    <div class="titlefield">
+                      <input type="text" id="title0" placeholder="DVD Title">
+                    </div>
+                    <div class="studiofield">
+                      <input type="text" id="studio0" placeholder="Studio">
+                    </div>
+                    <div class="runningtimefield">
+                      <input type="text" id="runningtime0" placeholder="DVD Running Time">
+                    </div>
+                    <div class="releaseyearfield">
+                      <input type="text" id="releaseyear0" placeholder="Release Year">
+                    </div>
+                    <div class="submitbutton">
+                      <input type="submit" class="btn-primary" id="submitButton0" value="Add a DVD">
+                      <!-- < class="btn-primary" also success warning danger> -->
+                    </div>
+                  </div>
+                </div>
+                  <!--</form> -->
+              </section>
+            </p>
+            <p>
+              <section>
+                    <!--<form action="/action_page.php">-->
+                <div class="vertical-menu">
+                Add 2 DVDs
+                  <div class="addDVD-form">
+                    <div class="titlefield">
+                      <input type="text" id="title1" placeholder="DVD Title">
+                    </div>
+                    <div class="studiofield">
+                     <input type="text" id="studio1" placeholder="Studio">
+                    </div>
+                    <div class="runningtimefield">
+                      <input type="text" id="runningtime1" placeholder="DVD Running Time">
+                    </div>
+                    <div class="releaseyearfield">
+                      <input type="text" id="releaseyear1" placeholder="Release Year">
+                    </div>
+                    <div class="submitbutton">
+                      <input type="submit" class="btn-primary" id="submitButton1" value="Add 2 DVDs">
+                    </div>
+                  </div>
+                </div>
+                  <!--</form> -->
+              </section>
+            </p>
+            <p>
+              <section>
+                    <!--<form action="/action_page.php">-->
+                <div class="vertical-menu">
+                  Add 3 DVDs
+                  <div class="addDVD-form">
+                    <div class="titlefield">
+                      <input type="text" id="title2" placeholder="DVD Title">
+                    </div>
+                    <div class="studiofield">
+                      <input type="text" id="studio2" placeholder="Studio">
+                    </div>
+                    <div class="runningtimefield">
+                      <input type="text" id="runningtime2" placeholder="DVD Running Time">
+                    </div>
+                    <div class="releaseyearfield">
+                      <input type="text" id="releaseyear2" placeholder="Release Year">
+                    </div>
+                    <div class="submitbutton">
+                      <input type="submit" class="btn-primary" id="submitButton2" value="Add 3 DVDs">
+                    </div>
+                  </div>
+                </div>
+                  <!--</form> -->
+              </section>
+            </p>
+            <p>
+              <section>
+                    <!--<form action="/action_page.php">-->
+                <div class="vertical-menu">
+                  Other Functions
+                  <div class="addDVD-form">
+                    <div class="removeTitleField">
+                      <input type="text" id="removeTitle" placeholder="DVD Title">
+                    </div>
+                    <div class="submitbutton">
+                       <input type="submit" class="btn-danger" id="submitButtonRemoveTitle" value="Remove DVD By Title">
+                    </div>
+                    <div class="removeStudioField">
+                      <input type="text" id="removeStudio" placeholder="DVD Studio">
+                    </div>
+                    <div class="submitbutton">
+                      <input type="submit" class="btn-danger" id="submitButtonRemoveStudio" value="Remove DVD By Studio">
+                    </div>
+                  </div>
+                </div>  
+              </section>
+              <section>
+                <div class="vertical-menu">
+                  <div class="getByTitleField">
+                    <input type="text" id="getByTitle" placeholder="DVD Title">
+                  </div>
+                  <div class="submitbutton">
+                    <input type="submit" class="btn-primary" id="submitButtonGetByTitle" value="List DVD By Title">
+                  </div>
+                  <div class="getByStudio">
+                    <input type="text" id="getByStudio" placeholder="DVD Studio">
+                  </div>
+                  <div class="submitbutton">
+                    <input type="submit" class="btn-primary" id="submitButtonGetByStudio" value="List DVD By Studio">
+                  </div>
+              </section>
+              <section>
+                <div class="submitbutton">
+                  <input type="submit" class="btn-primary" id="submitButtonGetStudios" value="List Studios">
+                </div>
+                <div class="submitbutton">
+                  <input type="submit" class="btn-primary" id="submitButtonRandomStudio" value="Random Studio">
+                </div>
+                <div class="submitbutton">
+                  <input type="submit" class="btn-primary" id="submitButtonRandomDVD" value="Random DVD">
+                </div>
+              </section>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="displayArea">  
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="display">
+            <p>
+              <div id=content>
+              </div>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="displayAray">  
+      <div class="row">
+        <div class="col-sm-6">
+          <div class="display">
+            <p>
+              <table  id="displayTable" class="table">
+
+
+<!--   <thead>
+    <tr>
+      <th>Title</th>
+      <th>Studio</th>
+      <th>Running Time</th>
+      <th>Release Year</th>
+    </tr>
+  </thead>
+  </table>
+
+  <tbody id="displayTable"> -->
+  
+<!--     <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr> -->
+
+  </tbody>
+
+</tbody>
+</table>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+
+      <!-- Footer -->
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="footer">
+          &#0169 2017 My Company | Denver, CO  |  800-GUD-CODE<br />
+          You have been using "My DVD Collection", hope you like it.<br />
+          Remember to give us some love on your favorite social media.<br />
+        </div>
+      </div>
+    </div>
   <!-- </div> -->
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>-->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="js/jquery-3.1.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <!--jQuery include below-->
-    <script src="js\jquery-3.1.1.min.js"></script>
-    <!-- <script src="js\newBook.js"></script> -->
-    <script src="js\DVD.js"></script>
-    <!-- <script src="js\library.js"></script> -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <!-- <script src="script.js"> type='text/javascript' href='js/DVD.js' </script> -->
+    <script src="js/DVD.js"></script>
   </body>
 </html>

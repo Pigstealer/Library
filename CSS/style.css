@@ -1,0 +1,74 @@
+/*
+	Styles for Class project
+*/
+
+body {
+	background-color: lightblue;
+}
+
+.title {
+  text-align: center;
+}
+
+.carousel-control {
+	 color: transparent;
+ }
+
+.carousel-inner > .item > img {
+    margin: 0 auto;
+}
+
+.morecontent span{
+	display:none;
+}
+
+.vertical-menu{
+	width: 32%;
+	float: left;
+}
+
+.get-remove-menus{
+	width: 30%;
+	float: left;
+}
+
+.titlefield{
+	margin: 10px;
+
+}
+.studiofield{
+	margin: 10px;
+}
+.runningtimefield{
+	margin: 10px;
+}
+.releaseyearfield{
+	margin: 10px;
+}
+
+.removeTitleField{
+	margin: 10px;
+}
+
+.removeStudioField{
+	margin: 10px;
+}
+
+.getByTitleField{
+	margin: 10px;
+}
+
+.getByStudio{
+	margin: 10px;
+}
+
+.submitbutton{
+	margin: 10px;
+}
+
+#displayTable{
+	margin: 5px;
+	border: 2px;
+	border-style: solid;
+	border-color: navy;
+}
