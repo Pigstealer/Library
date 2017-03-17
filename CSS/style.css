@@ -6,6 +6,19 @@ body {
 	background-color: lightblue;
 }
 
+#map {
+	height: 400px;
+    width: 100%;
+   	border: 2px;
+	border-style: solid;
+	border-color: navy;
+}
+
+#meetupVar {
+	color: purple;
+}
+
+}
 .title {
   text-align: center;
 }
